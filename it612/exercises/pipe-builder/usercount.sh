@@ -1,3 +1,3 @@
 #!/bin/bash
 set -e
-cat sample-passwd.txt | cut -d':' -f1 | sort | wc -l
+cat "$1" | cut -d':' -f1 | sort | uniq | wc -l
